@@ -4,14 +4,14 @@ namespace SaaSMobile
 {
     public class StudyParticipant
     {
-        private static int id = 0;
+        private static int _id = 0;
 
 
 
         public StudyParticipant(string firstName, string lastName, DateTime dob, string emailHandle, string emailDomain, string password)
         {
-            ++id;
-            Id = id;
+            ++_id;
+            Id = _id;
 
             FirstName = firstName;
             LastName = lastName;
