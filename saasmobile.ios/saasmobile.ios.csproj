@@ -99,6 +99,13 @@
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="LoginViewController.xib" />
+    <InterfaceDefinition Include="RegistrationViewController.xib" />
+    <InterfaceDefinition Include="DataViewController.xib" />
+    <InterfaceDefinition Include="StudiesViewController.xib" />
+    <InterfaceDefinition Include="SettingsViewController.xib" />
+    <InterfaceDefinition Include="DashboardTabBarController.xib" />
+    <InterfaceDefinition Include="ProfileViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -108,9 +115,33 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="ViewController.cs" />
-    <Compile Include="ViewController.designer.cs">
-      <DependentUpon>ViewController.cs</DependentUpon>
+    <Compile Include="LoginViewController.cs" />
+    <Compile Include="LoginViewController.designer.cs">
+      <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationViewController.cs" />
+    <Compile Include="RegistrationViewController.designer.cs">
+      <DependentUpon>RegistrationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataViewController.cs" />
+    <Compile Include="DataViewController.designer.cs">
+      <DependentUpon>DataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudiesViewController.cs" />
+    <Compile Include="StudiesViewController.designer.cs">
+      <DependentUpon>StudiesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardTabBarController.cs" />
+    <Compile Include="DashboardTabBarController.designer.cs">
+      <DependentUpon>DashboardTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileViewController.cs" />
+    <Compile Include="ProfileViewController.designer.cs">
+      <DependentUpon>ProfileViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

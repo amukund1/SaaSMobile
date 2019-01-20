@@ -4,11 +4,14 @@ using UIKit;
 
 namespace saasmobile.ios
 {
-    public partial class ViewController : UIViewController
+    public partial class LoginViewController : UIViewController
     {
-        protected ViewController(IntPtr handle) : base(handle)
+        public LoginViewController() : base("LoginViewController", null)
         {
-            // Note: this .ctor should not contain any initialization logic.
+        }
+
+        protected internal LoginViewController(IntPtr handle) : base(handle)
+        {
         }
 
         public override void ViewDidLoad()
@@ -22,5 +25,11 @@ namespace saasmobile.ios
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+        partial void BeginRegisterButton_TouchUpInside(UIButton sender)
+        {
+            Console.WriteLine("Register Button Clicked!");
+        }
     }
 }
+
