@@ -16,22 +16,80 @@ namespace saasmobile.ios
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField firstNameTextF { get; set; }
+        UIKit.UIButton finishRegisterButton { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView registerScreen { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtBDate { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtEmailDomain { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtEmailHandle { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtFName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtLName { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtPswd { get; set; }
+
+        [Action ("FinishRegisterButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void FinishRegisterButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
-            if (firstNameTextF != null) {
-                firstNameTextF.Dispose ();
-                firstNameTextF = null;
+            if (finishRegisterButton != null) {
+                finishRegisterButton.Dispose ();
+                finishRegisterButton = null;
             }
 
             if (registerScreen != null) {
                 registerScreen.Dispose ();
                 registerScreen = null;
+            }
+
+            if (txtBDate != null) {
+                txtBDate.Dispose ();
+                txtBDate = null;
+            }
+
+            if (txtEmailDomain != null) {
+                txtEmailDomain.Dispose ();
+                txtEmailDomain = null;
+            }
+
+            if (txtEmailHandle != null) {
+                txtEmailHandle.Dispose ();
+                txtEmailHandle = null;
+            }
+
+            if (txtFName != null) {
+                txtFName.Dispose ();
+                txtFName = null;
+            }
+
+            if (txtLName != null) {
+                txtLName.Dispose ();
+                txtLName = null;
+            }
+
+            if (txtPswd != null) {
+                txtPswd.Dispose ();
+                txtPswd = null;
             }
         }
     }

@@ -178,11 +178,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5122" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="167" y="481" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="FinishRegisterButton_TouchUpInside:" destination="838" id="5123" eventType="touchUpInside"/>
+                                    <segue id="5719" destination="200" kind="push"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="registerScreen" destination="839" id="name-outlet-839"/>
-                        <outlet property="firstNameTextF" destination="4433" id="name-outlet-4433"/>
+                        <outlet property="txtFName" destination="4433" id="name-outlet-4433"/>
+                        <outlet property="txtLName" destination="4442" id="name-outlet-4442"/>
+                        <outlet property="txtBDate" destination="4456" id="name-outlet-4456"/>
+                        <outlet property="txtEmailHandle" destination="4666" id="name-outlet-4666"/>
+                        <outlet property="txtEmailDomain" destination="4896" id="name-outlet-4896"/>
+                        <outlet property="txtPswd" destination="4667" id="name-outlet-4667"/>
+                        <outlet property="finishRegisterButton" destination="5122" id="name-outlet-5122"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="840" userLabel="First Responder" sceneMemberID="firstResponder"/>
