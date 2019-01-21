@@ -50,6 +50,11 @@ namespace saasmobile.ios
         {
             return !String.IsNullOrEmpty(txtPassword.Text.Trim());
         }
+
+        partial void BeginRegisterButton_TouchUpInside(UIButton sender)
+        {
+
+        }
     }
 }
 
