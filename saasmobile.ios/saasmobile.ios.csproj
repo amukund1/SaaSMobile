@@ -97,6 +97,8 @@
     <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
     <InterfaceDefinition Include="LoginViewController.xib" />
+    <InterfaceDefinition Include="StudiesViewController.xib" />
+    <InterfaceDefinition Include="RegistrationViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -108,6 +110,14 @@
     <Compile Include="LoginViewController.cs" />
     <Compile Include="LoginViewController.designer.cs">
       <DependentUpon>LoginViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudiesViewController.cs" />
+    <Compile Include="StudiesViewController.designer.cs">
+      <DependentUpon>StudiesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrationViewController.cs" />
+    <Compile Include="RegistrationViewController.designer.cs">
+      <DependentUpon>RegistrationViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
