@@ -28,12 +28,7 @@ namespace saasmobile.ios
 
         partial void LoginButton_TouchUpInside(UIButton sender)
         {
-            if (isValidEmail() && isValidPassword())
-            {
-                var alert = UIAlertController.Create("Correct Credentials", "Good Job", UIAlertControllerStyle.Alert);
-                ShowViewController(alert, null);
-            }
-            else
+            if (!isValidEmail() || !isValidPassword())
             {
                 var alert = UIAlertController.Create("Incorrect Credentials Entered", "Please try again.", UIAlertControllerStyle.Alert);
                 ShowViewController(alert, null);
