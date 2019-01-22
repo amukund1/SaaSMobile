@@ -2,6 +2,9 @@
 
 using UIKit;
 
+using SaaSMobile;
+using Foundation;
+
 namespace saasmobile.ios
 {
     public partial class RegistrationViewController : UIViewController
@@ -28,41 +31,57 @@ namespace saasmobile.ios
 
         partial void FinishRegisterButton_TouchUpInside(UIButton sender)
         {
-            if (isFirstNameEmpty() || isLastNameEmpty() || isBirthdateEmpty() || isHandleEmpty() || isDomainEmpty() || isPasswordEmpty())
+            var fName = txtFName.Text;
+            var lName = txtLName.Text;
+            var bDate = (DateTime) bDatePicker.Date;
+            var handle = txtEmailHandle.Text;
+            var domain = txtEmailDomain.Text;
+            var pswd = txtPswd.Text;
+
+            if (ShouldPerformSegue("finishRegisterSegue", sender))
             {
-                var alert = UIAlertController.Create("Empty Fields", "Please complete the entire form.", UIAlertControllerStyle.Alert);
-                ShowViewController(alert, null);
+                StudyParticipant sp = new StudyParticipant(fName, lName, bDate, handle, domain, pswd);
+                MockStudyParticipantTable.AddParticipant(sp);
+                //PerformSegue("finishRegisterSegue", sender);
             }
         }
 
-        private bool isFirstNameEmpty()
+        public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
-            return txtFName.Text.Length == 0;
-        }
+            var fName = txtFName.Text;
+            var lName = txtLName.Text;
+            var handle = txtEmailHandle.Text;
+            var domain = txtEmailDomain.Text;
+            var pswd = txtPswd.Text;
 
-        private bool isLastNameEmpty()
-        {
-            return txtLName.Text.Length == 0;
-        }
+            int numIncompleteFields = 0;
 
-        private bool isBirthdateEmpty()
-        {
-            return txtBDate.Text.Length == 0;
-        }
+            if (fName.Length == 0)
+            {
+                numIncompleteFields++;
+            }
 
-        private bool isHandleEmpty()
-        {
-            return txtEmailHandle.Text.Length == 0;
-        }
+            if (lName.Length == 0)
+            {
+                numIncompleteFields++;
+            }
 
-        private bool isDomainEmpty()
-        {
-            return txtEmailDomain.Text.Length == 0;
-        }
+            if (handle.Length == 0)
+            {
+                numIncompleteFields++;
+            }
 
-        private bool isPasswordEmpty()
-        {
-            return txtPswd.Text.Length == 0;
+            if (domain.Length == 0)
+            {
+                numIncompleteFields++;
+            }
+
+            if (pswd.Length == 0)
+            {
+                numIncompleteFields++;
+            }
+
+            return numIncompleteFields == 0;
         }
     }
 }

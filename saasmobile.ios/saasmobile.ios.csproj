@@ -120,5 +120,11 @@
       <DependentUpon>RegistrationViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SaaSMobile\SaaSMobile.csproj">
+      <Project>{ECDCCB5F-34EC-47E7-8EE9-B0EB1CFC61FD}</Project>
+      <Name>SaaSMobile</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

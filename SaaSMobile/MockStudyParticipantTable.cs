@@ -3,16 +3,11 @@ using System.Collections;
 
 namespace SaaSMobile
 {
-    public class MockStudyParticipantTable
+    public static class MockStudyParticipantTable
     {
-        private ArrayList table;
+        private static ArrayList table = new ArrayList();
 
-        public MockStudyParticipantTable()
-        {
-            table = new ArrayList();
-        }
-
-        public void AddParticipant(StudyParticipant participant)
+        public static void AddParticipant(StudyParticipant participant)
         {
             table.Add(participant);
         }
