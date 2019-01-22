@@ -42,7 +42,6 @@ namespace saasmobile.ios
             {
                 StudyParticipant sp = new StudyParticipant(fName, lName, bDate, handle, domain, pswd);
                 MockStudyParticipantTable.AddParticipant(sp);
-                //PerformSegue("finishRegisterSegue", sender);
             }
         }
 
