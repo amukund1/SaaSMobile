@@ -24,11 +24,15 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtEmail { get; set; }
+        UIKit.UITextField loginEmailDomain { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtPassword { get; set; }
+        UIKit.UITextField loginEmailHandle { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField loginPswd { get; set; }
 
         [Action ("BeginRegisterButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -50,14 +54,19 @@ namespace saasmobile.ios
                 loginButton = null;
             }
 
-            if (txtEmail != null) {
-                txtEmail.Dispose ();
-                txtEmail = null;
+            if (loginEmailDomain != null) {
+                loginEmailDomain.Dispose ();
+                loginEmailDomain = null;
             }
 
-            if (txtPassword != null) {
-                txtPassword.Dispose ();
-                txtPassword = null;
+            if (loginEmailHandle != null) {
+                loginEmailHandle.Dispose ();
+                loginEmailHandle = null;
+            }
+
+            if (loginPswd != null) {
+                loginPswd.Dispose ();
+                loginPswd = null;
             }
         }
     }

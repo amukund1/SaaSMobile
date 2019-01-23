@@ -11,5 +11,10 @@ namespace SaaSMobile
         {
             table.Add(participant);
         }
+
+        public static ArrayList getTable()
+        {
+            return table;
+        }
     }
 }

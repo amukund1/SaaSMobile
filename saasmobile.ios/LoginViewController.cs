@@ -2,6 +2,9 @@
 
 using UIKit;
 
+using SaaSMobile;
+using Foundation;
+
 namespace saasmobile.ios
 {
     public partial class LoginViewController : UIViewController
@@ -28,27 +31,39 @@ namespace saasmobile.ios
 
         partial void LoginButton_TouchUpInside(UIButton sender)
         {
-            if (!isValidEmail() || !isValidPassword())
+            if (!ShouldPerformSegue("loginSegue", sender))
             {
                 var alert = UIAlertController.Create("Incorrect Credentials Entered", "Please try again.", UIAlertControllerStyle.Alert);
                 ShowViewController(alert, null);
             }
         }
 
-
-        private bool isValidEmail()
+        public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
-            return !String.IsNullOrEmpty(txtEmail.Text.Trim());
+            return areCredentialsValid();
         }
 
-        private bool isValidPassword()
+
+        private bool areCredentialsValid()
         {
-            return !String.IsNullOrEmpty(txtPassword.Text.Trim());
+            string handle = loginEmailHandle.Text;
+            string domain = loginEmailDomain.Text;
+            string pswd = loginPswd.Text;
+
+            foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
+            {
+                if (handle.Equals(sp.EmailHandle) && domain.Equals(sp.EmailDomain) && pswd.Equals(sp.Password))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         partial void BeginRegisterButton_TouchUpInside(UIButton sender)
         {
-
+            PerformSegue("beginRegisterSegue", sender);
         }
     }
 }
