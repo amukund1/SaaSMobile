@@ -330,7 +330,7 @@
         </scene>
         <scene sceneID="2452">
             <objects>
-                <viewController id="2453" sceneMemberID="viewController">
+                <viewController id="2453" sceneMemberID="viewController" customClass="SettingsViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2450"/>
                         <viewControllerLayoutGuide type="bottom" id="2451"/>
@@ -339,9 +339,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9266" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="175" y="613" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="LogoutButton_TouchUpInside:" destination="2453" id="9314" eventType="touchUpInside"/>
+                                    <segue id="9891" destination="200" kind="push"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="2505"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="9266" id="name-outlet-9266"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2455" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
