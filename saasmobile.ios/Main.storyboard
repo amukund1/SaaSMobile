@@ -355,6 +355,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="2447"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="profileFName" destination="10185" id="name-outlet-10185"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2281" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,8 +9,6 @@ namespace saasmobile.ios
 {
     public partial class LoginViewController : UIViewController
     {
-        private StudyParticipant currentParticipant = null;
-
         public LoginViewController() : base("LoginViewController", null)
         {
         }
@@ -40,16 +38,6 @@ namespace saasmobile.ios
             }
         }
 
-        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
-        {
-            base.PrepareForSegue(segue, sender);
-
-            if (segue.Identifier.Equals("loginSegue"))
-            {
-                var dashboardTabBarController = segue.DestinationViewController as DashboardTabBarController;
-                dashboardTabBarController.CurrentParticipant = currentParticipant;
-            }
-        }
 
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
@@ -71,7 +59,7 @@ namespace saasmobile.ios
             {
                 if (handle.Equals(sp.EmailHandle) && domain.Equals(sp.EmailDomain) && pswd.Equals(sp.Password))
                 {
-                    currentParticipant = sp;
+                    MockStudyParticipantTable.CurrentParticipant = sp;
                     return true;
                 }
             }

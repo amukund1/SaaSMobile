@@ -8,12 +8,6 @@ namespace saasmobile.ios
 {
     public partial class ProfileViewController : UIViewController
     {
-        public StudyParticipant CurrentParticipant
-        {
-            get;
-            set;
-        }
-
         public ProfileViewController() : base("ProfileViewController", null)
         {
         }
@@ -26,6 +20,8 @@ namespace saasmobile.ios
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            profileFName.Text = MockStudyParticipantTable.CurrentParticipant.FirstName;
         }
 
         public override void DidReceiveMemoryWarning()

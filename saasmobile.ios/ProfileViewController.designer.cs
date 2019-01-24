@@ -14,8 +14,16 @@ namespace saasmobile.ios
     [Register ("ProfileViewController")]
     partial class ProfileViewController
     {
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel profileFName { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
+            if (profileFName != null) {
+                profileFName.Dispose ();
+                profileFName = null;
+            }
         }
     }
 }
