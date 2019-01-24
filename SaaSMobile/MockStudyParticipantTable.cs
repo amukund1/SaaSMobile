@@ -7,6 +7,12 @@ namespace SaaSMobile
     {
         private static ArrayList table = new ArrayList();
 
+        public static StudyParticipant CurrentParticipant
+        {
+            get;
+            set;
+        }
+
         public static void AddParticipant(StudyParticipant participant)
         {
             table.Add(participant);
