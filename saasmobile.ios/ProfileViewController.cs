@@ -22,6 +22,10 @@ namespace saasmobile.ios
             // Perform any additional setup after loading the view, typically from a nib.
 
             profileFName.Text = MockStudyParticipantTable.CurrentParticipant.FirstName;
+            profileLName.Text = MockStudyParticipantTable.CurrentParticipant.LastName;
+            profileBDate.Text = MockStudyParticipantTable.CurrentParticipant.DateOfBirth.Date.ToString("MM/dd/yyyy");
+            profileEmail.Text = MockStudyParticipantTable.CurrentParticipant.EmailHandle + "@" + MockStudyParticipantTable.CurrentParticipant.EmailDomain;
+            profilePswd.Text = MockStudyParticipantTable.CurrentParticipant.Password;
         }
 
         public override void DidReceiveMemoryWarning()
