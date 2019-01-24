@@ -9,6 +9,8 @@ namespace saasmobile.ios
 {
     public partial class LoginViewController : UIViewController
     {
+        private StudyParticipant currentParticipant = null;
+
         public LoginViewController() : base("LoginViewController", null)
         {
         }
@@ -38,13 +40,28 @@ namespace saasmobile.ios
             }
         }
 
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            if (segue.Identifier.Equals("loginSegue"))
+            {
+                var dashboardTabBarController = segue.DestinationViewController as DashboardTabBarController;
+                dashboardTabBarController.CurrentParticipant = currentParticipant;
+            }
+        }
+
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
         {
-            return areCredentialsValid();
+            if (segueIdentifier.Equals("loginSegue"))
+            {
+                return AreCredentialsValid();
+            }
+            return true;
         }
 
 
-        private bool areCredentialsValid()
+        private bool AreCredentialsValid()
         {
             string handle = loginEmailHandle.Text;
             string domain = loginEmailDomain.Text;
@@ -54,6 +71,7 @@ namespace saasmobile.ios
             {
                 if (handle.Equals(sp.EmailHandle) && domain.Equals(sp.EmailDomain) && pswd.Equals(sp.Password))
                 {
+                    currentParticipant = sp;
                     return true;
                 }
             }
@@ -63,7 +81,7 @@ namespace saasmobile.ios
 
         partial void BeginRegisterButton_TouchUpInside(UIButton sender)
         {
-            PerformSegue("beginRegisterSegue", sender);
+            //PerformSegue("beginRegisterSegue", sender);
         }
     }
 }

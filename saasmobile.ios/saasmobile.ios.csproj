@@ -100,6 +100,8 @@
     <InterfaceDefinition Include="StudiesViewController.xib" />
     <InterfaceDefinition Include="RegistrationViewController.xib" />
     <InterfaceDefinition Include="SettingsViewController.xib" />
+    <InterfaceDefinition Include="DashboardTabBarController.xib" />
+    <InterfaceDefinition Include="ProfileViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -123,6 +125,14 @@
     <Compile Include="SettingsViewController.cs" />
     <Compile Include="SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashboardTabBarController.cs" />
+    <Compile Include="DashboardTabBarController.designer.cs">
+      <DependentUpon>DashboardTabBarController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileViewController.cs" />
+    <Compile Include="ProfileViewController.designer.cs">
+      <DependentUpon>ProfileViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
