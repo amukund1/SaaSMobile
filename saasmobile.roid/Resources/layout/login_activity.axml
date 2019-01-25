@@ -7,6 +7,7 @@
 	android:gravity="center">
 	<TextView
 		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="30"
 		android:gravity="center"
 		android:textSize="50sp"
@@ -16,6 +17,7 @@
 	<EditText
 		android:text="Email"
 		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginLeft="50dp"
 		android:layout_marginRight="50dp"
@@ -23,6 +25,7 @@
 	<EditText
 		android:text="Password"
 		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginLeft="50dp"
 		android:layout_marginRight="50dp"
@@ -30,6 +33,7 @@
 	<Button
 		android:text="Login"
 		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginTop="60dp"
 		android:layout_marginLeft="100dp"
@@ -38,6 +42,7 @@
 	<Button
 		android:text="Register"
 		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginTop="25dp"
 		android:layout_marginLeft="100dp"

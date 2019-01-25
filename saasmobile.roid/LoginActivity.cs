@@ -41,9 +41,9 @@ namespace saasmobile.roid
 
         private bool AreCredentialsValid()
         {
-            string email = Email.ToString();
+            String email = Email.Text;
             Console.Write(email);
-            string password = Password.ToString();
+            String password = Password.Text;
 
             int atIndex = email.IndexOf("@");
             string handle = email.Substring(0, atIndex);
