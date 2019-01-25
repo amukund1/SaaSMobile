@@ -62,7 +62,7 @@ namespace saasmobile.roid
                     alert.SetMessage("The email you have entered is already registered. Please try again with a different email.");
                     alert.Show();
                 }
-                else if (DoPasswordsMatch())
+                else if (!DoPasswordsMatch())
                 {
                     Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(this);
                     alert.SetTitle("Passwords Do Not Match");
@@ -118,7 +118,7 @@ namespace saasmobile.roid
 
         private bool DoPasswordsMatch()
         {
-            return Password.Equals(ReEnterPassword);
+            return string.Equals(Password, ReEnterPassword);
         }
     }
 }
