@@ -1,5 +1,4 @@
-﻿using System;
-using Android.App;
+﻿using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
@@ -10,8 +9,9 @@ namespace saasmobile.roid
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
     public class LoginActivity : AppCompatActivity
     {
-        private EditText Email;
-        private EditText Password;
+        private string Password;
+        private string EmailHandle;
+        private string EmailDomain;
         private Button Login;
         private Button Register;
 
@@ -21,12 +21,17 @@ namespace saasmobile.roid
             // Set our view from the login layout resource
             SetContentView(Resource.Layout.login_activity);
 
-            Email = (EditText)FindViewById(Resource.Id.emailText);
-            Password = (EditText)FindViewById(Resource.Id.passwordText);
-            Login = (Button)FindViewById(Resource.Id.loginButton);
-            Register = (Button)FindViewById(Resource.Id.registerButton);
+            Login = FindViewById<Button>(Resource.Id.loginButton);
+            Register = FindViewById<Button>(Resource.Id.registerButton);
 
             Login.Click += delegate {
+
+                string email = FindViewById<EditText>(Resource.Id.emailText).Text.ToLower();
+                int atIndex = email.IndexOf("@");
+                EmailHandle = email.Substring(0, atIndex);
+                EmailDomain = email.Substring(atIndex);
+                Password = FindViewById<EditText>(Resource.Id.passwordText).Text;
+
                 if (AreCredentialsValid()) {
                     StartActivity(typeof(DashboardActivity));
                 } else
@@ -37,21 +42,18 @@ namespace saasmobile.roid
                     alert.Show();
                 }
             };
+
+            Register.Click += delegate
+            {
+                StartActivity(typeof(RegisterActivity));
+            };
         }
 
         private bool AreCredentialsValid()
         {
-            String email = Email.Text;
-            Console.Write(email);
-            String password = Password.Text;
-
-            int atIndex = email.IndexOf("@");
-            string handle = email.Substring(0, atIndex);
-            string domain = email.Substring(atIndex);
-
             foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
             {
-                if (handle.Equals(sp.EmailHandle) && domain.Equals(sp.EmailDomain) && password.Equals(sp.Password))
+                if (EmailHandle.Equals(sp.EmailHandle) && EmailDomain.Equals(sp.EmailDomain) && Password.Equals(sp.Password))
                 {
                     MockStudyParticipantTable.CurrentParticipant = sp;
                     return true;

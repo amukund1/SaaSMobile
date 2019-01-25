@@ -2474,6 +2474,9 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f08006b
 			public const int customPanel = 2131230827;
 			
+			// aapt resource value: 0x7f0800b2
+			public const int dateOfBirthRegisterButton = 2131230898;
+			
 			// aapt resource value: 0x7f080079
 			public const int decor_content_parent = 2131230841;
 			
@@ -2500,6 +2503,9 @@ namespace saasmobile.roid
 			
 			// aapt resource value: 0x7f08007d
 			public const int edit_query = 2131230845;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int emailRegisterText = 2131230899;
 			
 			// aapt resource value: 0x7f080099
 			public const int emailText = 2131230873;
@@ -2533,6 +2539,9 @@ namespace saasmobile.roid
 			
 			// aapt resource value: 0x7f080047
 			public const int fill_vertical = 2131230791;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int firstNameRegisterText = 2131230896;
 			
 			// aapt resource value: 0x7f080053
 			public const int @fixed = 2131230803;
@@ -2573,6 +2582,9 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f08008b
 			public const int largeLabel = 2131230859;
 			
+			// aapt resource value: 0x7f0800b1
+			public const int lastNameRegisterText = 2131230897;
+			
 			// aapt resource value: 0x7f080048
 			public const int left = 2131230792;
 			
@@ -2591,14 +2603,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f08009b
 			public const int loginButton = 2131230875;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int masked = 2131230898;
+			// aapt resource value: 0x7f0800b9
+			public const int masked = 2131230905;
 			
 			// aapt resource value: 0x7f0800a3
 			public const int media_actions = 2131230883;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int message = 2131230896;
+			// aapt resource value: 0x7f0800b7
+			public const int message = 2131230903;
 			
 			// aapt resource value: 0x7f080030
 			public const int middle = 2131230768;
@@ -2639,6 +2651,9 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f08000b
 			public const int parent_matrix = 2131230731;
 			
+			// aapt resource value: 0x7f0800b4
+			public const int passwordRegisterText = 2131230900;
+			
 			// aapt resource value: 0x7f08009a
 			public const int passwordText = 2131230874;
 			
@@ -2654,8 +2669,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f080074
 			public const int radio = 2131230836;
 			
+			// aapt resource value: 0x7f0800b5
+			public const int reEnterPasswordRegisterText = 2131230901;
+			
 			// aapt resource value: 0x7f08009c
 			public const int registerButton = 2131230876;
+			
+			// aapt resource value: 0x7f0800b6
+			public const int registeringButton = 2131230902;
 			
 			// aapt resource value: 0x7f080049
 			public const int right = 2131230793;
@@ -2849,8 +2870,8 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f080016
 			public const int view_offset_helper = 2131230742;
 			
-			// aapt resource value: 0x7f0800b1
-			public const int visible = 2131230897;
+			// aapt resource value: 0x7f0800b8
+			public const int visible = 2131230904;
 			
 			// aapt resource value: 0x7f080098
 			public const int welcomeText = 2131230872;

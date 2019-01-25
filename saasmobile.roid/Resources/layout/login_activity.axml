@@ -15,20 +15,24 @@
 		android:text="SaaS Mobile"
 		android:id="@+id/welcomeText" />
 	<EditText
-		android:text="Email"
+		android:hint="Email"
+		android:inputType="textEmailAddress"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginLeft="50dp"
 		android:layout_marginRight="50dp"
+		android:singleLine="true"
 		android:id="@+id/emailText" />
 	<EditText
-		android:text="Password"
+		android:hint="Password"
+		android:inputType="textPassword"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="15"
 		android:layout_marginLeft="50dp"
 		android:layout_marginRight="50dp"
+		android:singleLine="true"
 		android:id="@+id/passwordText" />
 	<Button
 		android:text="Login"
