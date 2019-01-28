@@ -2,7 +2,6 @@
 using Android.OS;
 using Android.Widget;
 using SaaSMobile;
-using System.Globalization;
 
 namespace saasmobile.roid
 {
