@@ -25,7 +25,8 @@
 		android:singleLine="true"
 		android:id="@+id/lastNameRegisterText" />
 	<EditText
-		android:hint="Select Date Of Birth"
+		android:hint="Date Of Birth (mm/dd/yyyy)"
+		android:inputType="date"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="13"
