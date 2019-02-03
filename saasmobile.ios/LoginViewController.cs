@@ -4,8 +4,6 @@ using UIKit;
 
 using SaaSMobile;
 using Foundation;
-using System.Net.Mail;
-using System.Text.RegularExpressions;
 
 namespace saasmobile.ios
 {
@@ -22,7 +20,8 @@ namespace saasmobile.ios
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            loginEmail.Text = MockStudyParticipantTable.CurrentParticipant.Email;
         }
 
         public override void DidReceiveMemoryWarning()
@@ -53,33 +52,11 @@ namespace saasmobile.ios
 
         private bool AreCredentialsValid()
         {
-            string email = loginEmail.Text;
+            StudyParticipant curParticipant = MockStudyParticipantTable.CurrentParticipant;
             string pswd = loginPswd.Text;
 
-            bool isEmailFormatted = Regex.IsMatch(email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
 
-            if (!isEmailFormatted)
-            {
-                return false;
-            }
-
-
-
-            foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
-            {
-                if (email.Equals(sp.Email) && pswd.Equals(sp.Password))
-                {
-                    MockStudyParticipantTable.CurrentParticipant = sp;
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        partial void BeginRegisterButton_TouchUpInside(UIButton sender)
-        {
-
+            return pswd.Equals(curParticipant.Password);
         }
     }
 }

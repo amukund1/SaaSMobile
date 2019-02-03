@@ -16,10 +16,6 @@ namespace saasmobile.ios
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton beginRegisterButton { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton loginButton { get; set; }
 
         [Outlet]
@@ -30,21 +26,12 @@ namespace saasmobile.ios
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField loginPswd { get; set; }
 
-        [Action ("BeginRegisterButton_TouchUpInside:")]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        partial void BeginRegisterButton_TouchUpInside (UIKit.UIButton sender);
-
         [Action ("LoginButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void LoginButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
-            if (beginRegisterButton != null) {
-                beginRegisterButton.Dispose ();
-                beginRegisterButton = null;
-            }
-
             if (loginButton != null) {
                 loginButton.Dispose ();
                 loginButton = null;

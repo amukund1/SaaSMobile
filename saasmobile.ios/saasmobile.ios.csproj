@@ -112,6 +112,7 @@
     <InterfaceDefinition Include="SettingsViewController.xib" />
     <InterfaceDefinition Include="DashboardTabBarController.xib" />
     <InterfaceDefinition Include="ProfileViewController.xib" />
+    <InterfaceDefinition Include="WelcomeViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -143,6 +144,10 @@
     <Compile Include="ProfileViewController.cs" />
     <Compile Include="ProfileViewController.designer.cs">
       <DependentUpon>ProfileViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WelcomeViewController.cs" />
+    <Compile Include="WelcomeViewController.designer.cs">
+      <DependentUpon>WelcomeViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
