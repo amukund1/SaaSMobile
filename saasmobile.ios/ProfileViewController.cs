@@ -21,11 +21,15 @@ namespace saasmobile.ios
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
 
-            profileFName.Text = MockStudyParticipantTable.CurrentParticipant.FirstName;
-            profileLName.Text = MockStudyParticipantTable.CurrentParticipant.LastName;
-            profileBDate.Text = MockStudyParticipantTable.CurrentParticipant.DateOfBirth.Date.ToString("MM/dd/yyyy");
-            profileEmail.Text = MockStudyParticipantTable.CurrentParticipant.Email;
-            profilePswd.Text = MockStudyParticipantTable.CurrentParticipant.Password;
+            StudyParticipant curParticipant = MockStudyParticipantTable.CurrentParticipant;
+
+            profileFName.Text = curParticipant.FirstName;
+            profileLName.Text = curParticipant.LastName;
+            profileBDate.Text = curParticipant.DateOfBirth.Date.ToString("MM/dd/yyyy");
+            profileZipCode.Text = curParticipant.ZipCode;
+            profileCountry.Text = curParticipant.Country;
+            profileEmail.Text = curParticipant.Email;
+            profilePswd.Text = curParticipant.Password;
         }
 
         public override void DidReceiveMemoryWarning()

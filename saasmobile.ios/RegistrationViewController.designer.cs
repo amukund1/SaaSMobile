@@ -28,6 +28,10 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtCountry { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtEmail { get; set; }
 
         [Outlet]
@@ -41,6 +45,10 @@ namespace saasmobile.ios
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtPswd { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtZipCode { get; set; }
 
         [Action ("FinishRegisterButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -63,6 +71,11 @@ namespace saasmobile.ios
                 registerScreen = null;
             }
 
+            if (txtCountry != null) {
+                txtCountry.Dispose ();
+                txtCountry = null;
+            }
+
             if (txtEmail != null) {
                 txtEmail.Dispose ();
                 txtEmail = null;
@@ -81,6 +94,11 @@ namespace saasmobile.ios
             if (txtPswd != null) {
                 txtPswd.Dispose ();
                 txtPswd = null;
+            }
+
+            if (txtZipCode != null) {
+                txtZipCode.Dispose ();
+                txtZipCode = null;
             }
         }
     }

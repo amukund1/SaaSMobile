@@ -35,12 +35,14 @@ namespace saasmobile.ios
             var fName = txtFName.Text;
             var lName = txtLName.Text;
             var bDate = (DateTime) bDatePicker.Date;
+            var zip = txtZipCode.Text;
+            var country = txtCountry.Text;
             var email = txtEmail.Text;
             var pswd = txtPswd.Text;
 
             if (ShouldPerformSegue("finishRegisterSegue", sender))
             {
-                StudyParticipant sp = new StudyParticipant(fName, lName, bDate, email, pswd);
+                StudyParticipant sp = new StudyParticipant(fName, lName, bDate, zip, country, email, pswd);
                 MockStudyParticipantTable.AddParticipant(sp);
             }
         }
@@ -49,6 +51,8 @@ namespace saasmobile.ios
         {
             var fName = txtFName.Text;
             var lName = txtLName.Text;
+            var zip = txtZipCode.Text;
+            var country = txtCountry.Text;
             var email = txtEmail.Text;
             var pswd = txtPswd.Text;
 
@@ -67,6 +71,16 @@ namespace saasmobile.ios
             bool isEmailFormatted = Regex.IsMatch(email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
 
             if (email.Length == 0 || !isEmailFormatted)
+            {
+                numIncompleteFields++;
+            }
+
+            if (zip.Length == 0)
+            {
+                numIncompleteFields++;
+            }
+
+            if (country.Length == 0)
             {
                 numIncompleteFields++;
             }

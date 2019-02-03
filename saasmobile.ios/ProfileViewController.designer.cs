@@ -20,6 +20,10 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel profileCountry { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel profileEmail { get; set; }
 
         [Outlet]
@@ -34,11 +38,20 @@ namespace saasmobile.ios
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel profilePswd { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel profileZipCode { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (profileBDate != null) {
                 profileBDate.Dispose ();
                 profileBDate = null;
+            }
+
+            if (profileCountry != null) {
+                profileCountry.Dispose ();
+                profileCountry = null;
             }
 
             if (profileEmail != null) {
@@ -59,6 +72,11 @@ namespace saasmobile.ios
             if (profilePswd != null) {
                 profilePswd.Dispose ();
                 profilePswd = null;
+            }
+
+            if (profileZipCode != null) {
+                profileZipCode.Dispose ();
+                profileZipCode = null;
             }
         }
     }
