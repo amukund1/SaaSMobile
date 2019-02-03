@@ -2,7 +2,6 @@
 using Android.OS;
 using Android.Widget;
 using SaaSMobile;
-using System.Globalization;
 
 namespace saasmobile.roid
 {
@@ -11,7 +10,8 @@ namespace saasmobile.roid
     {
         private string FirstName;
         private string LastName;
-        private string DateOfBirth;
+        private string DateOfBirthString;
+        private System.DateTime DateOfBirth;
         private string Email;
         private string EmailHandle;
         private string EmailDomain;
@@ -34,7 +34,7 @@ namespace saasmobile.roid
                 FirstName = char.ToUpper(firstName[0]) + firstName.Substring(1);
                 string lastName = FindViewById<EditText>(Resource.Id.lastNameRegisterText).Text;
                 LastName = char.ToUpper(lastName[0]) + lastName.Substring(1);
-                DateOfBirth = FindViewById<EditText>(Resource.Id.dateOfBirthRegisterButton).Text;
+                DateOfBirthString = FindViewById<EditText>(Resource.Id.dateOfBirthRegisterButton).Text;
                 Email = FindViewById<EditText>(Resource.Id.emailRegisterText).Text.ToLower();
                 ReEnterPassword = FindViewById<EditText>(Resource.Id.reEnterPasswordRegisterText).Text;
                 Password = FindViewById<EditText>(Resource.Id.passwordRegisterText).Text;
@@ -61,6 +61,12 @@ namespace saasmobile.roid
                     alert.SetTitle("Email In Use");
                     alert.SetMessage("The email you have entered is already registered. Please try again with a different email.");
                     alert.Show();
+                } else if (DateOfBirthIncorrectFormat())
+                {
+                    Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(this);
+                    alert.SetTitle("Date Of Birth Incorrect Format");
+                    alert.SetMessage("The date of birth that you have entered is not in the correct format. Please use mm/dd/yyyy.");
+                    alert.Show();
                 }
                 else if (!DoPasswordsMatch())
                 {
@@ -72,7 +78,7 @@ namespace saasmobile.roid
                 else
                 {
                     // date of birth to be implemented
-                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, new System.DateTime(1999, 1, 1), EmailHandle, EmailDomain, Password);
+                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, EmailHandle, EmailDomain, Password);
                     MockStudyParticipantTable.AddParticipant(newUser);
                     StartActivity(typeof(LoginActivity));
                 }
@@ -82,12 +88,27 @@ namespace saasmobile.roid
         private bool HasMissingFields()
         {
             return string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName) || string.IsNullOrEmpty(Email)
-                || string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(ReEnterPassword) || DateOfBirthNotSelected();
+                || string.IsNullOrEmpty(Password) || string.IsNullOrEmpty(ReEnterPassword) || string.IsNullOrEmpty(DateOfBirthString);
         }
 
-        private bool DateOfBirthNotSelected()
+        private bool DateOfBirthIncorrectFormat()
         {
-            return false;
+            if (!DateOfBirthString.Contains("/"))
+            {
+                return true;
+            } else
+            {
+                string[] monthDateYear = DateOfBirthString.Split("/");
+                if (monthDateYear.Length != 3 || monthDateYear[0].Length != 2
+                    || monthDateYear[1].Length != 2 || monthDateYear[2].Length != 4)
+                {
+                    return true;
+                } else
+                {
+                    DateOfBirth = new System.DateTime(int.Parse(monthDateYear[2]), int.Parse(monthDateYear[0]), int.Parse(monthDateYear[1]));
+                    return false;
+                }
+            }
         }
 
         private bool IsEmailMissingAtSign()

@@ -25,7 +25,8 @@
 		android:singleLine="true"
 		android:id="@+id/lastNameRegisterText" />
 	<EditText
-		android:hint="Select Date Of Birth"
+		android:hint="Date Of Birth (mm/dd/yyyy)"
+		android:inputType="date"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="13"
@@ -67,9 +68,9 @@
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_weight="12"
-		android:layout_marginTop="25dp"
-		android:layout_marginLeft="150dp"
-		android:layout_marginRight="150dp"
+		android:layout_marginTop="50dp"
+		android:layout_marginLeft="100dp"
+		android:layout_marginRight="100dp"
 		android:id="@+id/registeringButton" />
 
 </LinearLayout>
