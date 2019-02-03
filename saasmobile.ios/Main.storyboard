@@ -172,7 +172,7 @@
                                 </state>
                                 <connections>
                                     <action selector="FinishRegisterButton_TouchUpInside:" destination="838" id="5123" eventType="touchUpInside"/>
-                                    <segue id="5719" destination="200" kind="push" identifier="finishRegisterSegue"/>
+                                    <segue id="20321" destination="15526" kind="push" identifier="finishRegisterSegue"/>
                                 </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="6222" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -189,7 +189,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="14415" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="14415" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="131" y="346" width="255" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -203,7 +203,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="14417" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" id="14417" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="131" y="392" width="255" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -459,7 +459,7 @@
                                 </state>
                                 <connections>
                                     <action selector="LogoutButton_TouchUpInside:" destination="2453" id="9314" eventType="touchUpInside"/>
-                                    <segue id="9891" destination="200" kind="push"/>
+                                    <segue id="20982" destination="15526" kind="push"/>
                                 </connections>
                             </button>
                         </subviews>
