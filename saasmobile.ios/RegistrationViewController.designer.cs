@@ -28,11 +28,7 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtEmailDomain { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField txtEmailHandle { get; set; }
+        UIKit.UITextField txtEmail { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -67,14 +63,9 @@ namespace saasmobile.ios
                 registerScreen = null;
             }
 
-            if (txtEmailDomain != null) {
-                txtEmailDomain.Dispose ();
-                txtEmailDomain = null;
-            }
-
-            if (txtEmailHandle != null) {
-                txtEmailHandle.Dispose ();
-                txtEmailHandle = null;
+            if (txtEmail != null) {
+                txtEmail.Dispose ();
+                txtEmail = null;
             }
 
             if (txtFName != null) {

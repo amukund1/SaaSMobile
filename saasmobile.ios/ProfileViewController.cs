@@ -24,7 +24,7 @@ namespace saasmobile.ios
             profileFName.Text = MockStudyParticipantTable.CurrentParticipant.FirstName;
             profileLName.Text = MockStudyParticipantTable.CurrentParticipant.LastName;
             profileBDate.Text = MockStudyParticipantTable.CurrentParticipant.DateOfBirth.Date.ToString("MM/dd/yyyy");
-            profileEmail.Text = MockStudyParticipantTable.CurrentParticipant.EmailHandle + "@" + MockStudyParticipantTable.CurrentParticipant.EmailDomain;
+            profileEmail.Text = MockStudyParticipantTable.CurrentParticipant.Email;
             profilePswd.Text = MockStudyParticipantTable.CurrentParticipant.Password;
         }
 

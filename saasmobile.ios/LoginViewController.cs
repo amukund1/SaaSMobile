@@ -4,6 +4,8 @@ using UIKit;
 
 using SaaSMobile;
 using Foundation;
+using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace saasmobile.ios
 {
@@ -51,13 +53,21 @@ namespace saasmobile.ios
 
         private bool AreCredentialsValid()
         {
-            string handle = loginEmailHandle.Text;
-            string domain = loginEmailDomain.Text;
+            string email = loginEmail.Text;
             string pswd = loginPswd.Text;
+
+            bool isEmailFormatted = Regex.IsMatch(email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+
+            if (!isEmailFormatted)
+            {
+                return false;
+            }
+
+
 
             foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
             {
-                if (handle.Equals(sp.EmailHandle) && domain.Equals(sp.EmailDomain) && pswd.Equals(sp.Password))
+                if (email.Equals(sp.Email) && pswd.Equals(sp.Password))
                 {
                     MockStudyParticipantTable.CurrentParticipant = sp;
                     return true;
@@ -69,7 +79,7 @@ namespace saasmobile.ios
 
         partial void BeginRegisterButton_TouchUpInside(UIButton sender)
         {
-            //PerformSegue("beginRegisterSegue", sender);
+
         }
     }
 }

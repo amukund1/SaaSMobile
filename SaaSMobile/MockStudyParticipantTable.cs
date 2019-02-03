@@ -5,7 +5,7 @@ namespace SaaSMobile
 {
     public static class MockStudyParticipantTable
     {
-        private static ArrayList table = new ArrayList() { new StudyParticipant("bob", "waters", new DateTime(1999, 1, 1), "bobwaters", "@gmail.com", "123") };
+        private static ArrayList table = new ArrayList() { new StudyParticipant("Adithya", "Mukund", new DateTime(1998, 07, 15), "adithyam120@gmail.com", "123") };
 
         public static StudyParticipant CurrentParticipant
         {

@@ -4,6 +4,7 @@ using UIKit;
 
 using SaaSMobile;
 using Foundation;
+using System.Text.RegularExpressions;
 
 namespace saasmobile.ios
 {
@@ -34,13 +35,12 @@ namespace saasmobile.ios
             var fName = txtFName.Text;
             var lName = txtLName.Text;
             var bDate = (DateTime) bDatePicker.Date;
-            var handle = txtEmailHandle.Text;
-            var domain = txtEmailDomain.Text;
+            var email = txtEmail.Text;
             var pswd = txtPswd.Text;
 
             if (ShouldPerformSegue("finishRegisterSegue", sender))
             {
-                StudyParticipant sp = new StudyParticipant(fName, lName, bDate, handle, domain, pswd);
+                StudyParticipant sp = new StudyParticipant(fName, lName, bDate, email, pswd);
                 MockStudyParticipantTable.AddParticipant(sp);
             }
         }
@@ -49,8 +49,7 @@ namespace saasmobile.ios
         {
             var fName = txtFName.Text;
             var lName = txtLName.Text;
-            var handle = txtEmailHandle.Text;
-            var domain = txtEmailDomain.Text;
+            var email = txtEmail.Text;
             var pswd = txtPswd.Text;
 
             int numIncompleteFields = 0;
@@ -65,12 +64,9 @@ namespace saasmobile.ios
                 numIncompleteFields++;
             }
 
-            if (handle.Length == 0)
-            {
-                numIncompleteFields++;
-            }
+            bool isEmailFormatted = Regex.IsMatch(email, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
 
-            if (domain.Length == 0)
+            if (email.Length == 0 || !isEmailFormatted)
             {
                 numIncompleteFields++;
             }

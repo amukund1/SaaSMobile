@@ -8,7 +8,7 @@ namespace SaaSMobile
 
 
 
-        public StudyParticipant(string firstName, string lastName, DateTime dob, string emailHandle, string emailDomain, string password)
+        public StudyParticipant(string firstName, string lastName, DateTime dob, string email, string password)
         {
             ++id;
             Id = id;
@@ -16,8 +16,7 @@ namespace SaaSMobile
             FirstName = firstName;
             LastName = lastName;
             DateOfBirth = dob;
-            EmailHandle = emailHandle;
-            EmailDomain = emailDomain;
+            Email = email;
             Password = password;
 
             IsActive = true;
@@ -43,13 +42,7 @@ namespace SaaSMobile
             get;
         }
 
-        public string EmailHandle
-        {
-            get;
-            set;
-        }
-
-        public string EmailDomain
+        public string Email
         {
             get;
             set;
