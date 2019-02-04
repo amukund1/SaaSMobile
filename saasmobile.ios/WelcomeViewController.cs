@@ -66,8 +66,9 @@ namespace saasmobile.ios
         {
             if (!ShouldPerformSegue("beginLoginSegue", sender))
             {
-                var alert = UIAlertController.Create("Incorrect Credentials Entered", "Please try again.", UIAlertControllerStyle.Alert);
-                ShowViewController(alert, null);
+                var invalidAlert = UIAlertController.Create("You need to enter a valid email address.", "Please try again.", UIAlertControllerStyle.Alert);
+                invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
+                PresentViewController(invalidAlert, true, null);
             }
         }
 

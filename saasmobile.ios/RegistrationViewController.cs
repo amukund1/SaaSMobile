@@ -45,6 +45,12 @@ namespace saasmobile.ios
                 StudyParticipant sp = new StudyParticipant(fName, lName, bDate, zip, country, email, pswd);
                 MockStudyParticipantTable.AddParticipant(sp);
             }
+            else
+            {
+                var invalidAlert = UIAlertController.Create("You need to fill out all fields.", "Please try again.", UIAlertControllerStyle.Alert);
+                invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
+                PresentViewController(invalidAlert, true, null);
+            }
         }
 
         public override bool ShouldPerformSegue(string segueIdentifier, NSObject sender)
