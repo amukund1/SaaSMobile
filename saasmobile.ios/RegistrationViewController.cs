@@ -40,6 +40,14 @@ namespace saasmobile.ios
             var email = txtEmail.Text;
             var pswd = txtPswd.Text;
 
+            if (!isOfAge(bDate))
+            {
+                var invalidAlert = UIAlertController.Create("Age Error.", "You need to be at least 18 years old to register.", UIAlertControllerStyle.Alert);
+                invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
+                PresentViewController(invalidAlert, true, null);
+                return;
+            }
+
             if (ShouldPerformSegue("finishRegisterSegue", sender))
             {
                 StudyParticipant sp = new StudyParticipant(fName, lName, bDate, zip, country, email, pswd);
@@ -97,6 +105,13 @@ namespace saasmobile.ios
             }
 
             return numIncompleteFields == 0;
+        }
+
+        private bool isOfAge(DateTime bDate)
+        {
+            TimeSpan minAge = new TimeSpan(365 * 18, 0, 0, 0);
+
+            return bDate.Add(minAge) <= DateTime.Today;
         }
     }
 }
