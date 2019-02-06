@@ -39,10 +39,19 @@ namespace saasmobile.ios
             var country = txtCountry.Text;
             var email = txtEmail.Text;
             var pswd = txtPswd.Text;
+            var confPswd = txtConfPswd.Text;
 
             if (!isOfAge(bDate))
             {
                 var invalidAlert = UIAlertController.Create("Age Error.", "You need to be at least 18 years old to register.", UIAlertControllerStyle.Alert);
+                invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
+                PresentViewController(invalidAlert, true, null);
+                return;
+            }
+
+            if (!pswd.Equals(confPswd))
+            {
+                var invalidAlert = UIAlertController.Create("Passwords don't match.", "Please try again.", UIAlertControllerStyle.Alert);
                 invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
                 PresentViewController(invalidAlert, true, null);
                 return;
