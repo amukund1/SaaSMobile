@@ -20,7 +20,7 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel profileCountry { get; set; }
+        UIKit.UITextField profileCountry { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -36,11 +36,19 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel profilePswd { get; set; }
+        UIKit.UITextField profilePassword { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel profileZipCode { get; set; }
+        UIKit.UITextField profileZipCode { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton updateProfileButton { get; set; }
+
+        [Action ("UpdateProfileButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void UpdateProfileButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -69,14 +77,19 @@ namespace saasmobile.ios
                 profileLName = null;
             }
 
-            if (profilePswd != null) {
-                profilePswd.Dispose ();
-                profilePswd = null;
+            if (profilePassword != null) {
+                profilePassword.Dispose ();
+                profilePassword = null;
             }
 
             if (profileZipCode != null) {
                 profileZipCode.Dispose ();
                 profileZipCode = null;
+            }
+
+            if (updateProfileButton != null) {
+                updateProfileButton.Dispose ();
+                updateProfileButton = null;
             }
         }
     }
