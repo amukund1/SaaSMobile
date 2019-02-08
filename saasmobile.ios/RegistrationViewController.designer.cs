@@ -28,6 +28,10 @@ namespace saasmobile.ios
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UITextField txtConfPswd { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField txtCountry { get; set; }
 
         [Outlet]
@@ -69,6 +73,11 @@ namespace saasmobile.ios
             if (registerScreen != null) {
                 registerScreen.Dispose ();
                 registerScreen = null;
+            }
+
+            if (txtConfPswd != null) {
+                txtConfPswd.Dispose ();
+                txtConfPswd = null;
             }
 
             if (txtCountry != null) {
