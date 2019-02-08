@@ -10,8 +10,7 @@ namespace saasmobile.roid
     public class LoginActivity : AppCompatActivity
     {
         private string Password;
-        private string EmailHandle;
-        private string EmailDomain;
+        private string Email;
         private Button Login;
         private Button Register;
 
@@ -26,10 +25,7 @@ namespace saasmobile.roid
 
             Login.Click += delegate {
 
-                string email = FindViewById<EditText>(Resource.Id.emailText).Text.ToLower();
-                int atIndex = email.IndexOf("@");
-                EmailHandle = email.Substring(0, atIndex);
-                EmailDomain = email.Substring(atIndex);
+                Email = FindViewById<EditText>(Resource.Id.emailText).Text.ToLower();
                 Password = FindViewById<EditText>(Resource.Id.passwordText).Text;
 
                 if (AreCredentialsValid()) {
@@ -53,7 +49,7 @@ namespace saasmobile.roid
         {
             foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
             {
-                if (EmailHandle.Equals(sp.EmailHandle) && EmailDomain.Equals(sp.EmailDomain) && Password.Equals(sp.Password))
+                if (Email.Equals(sp.Email) && Password.Equals(sp.Password))
                 {
                     MockStudyParticipantTable.CurrentParticipant = sp;
                     return true;

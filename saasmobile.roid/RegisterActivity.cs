@@ -13,8 +13,6 @@ namespace saasmobile.roid
         private string DateOfBirthString;
         private System.DateTime DateOfBirth;
         private string Email;
-        private string EmailHandle;
-        private string EmailDomain;
         private string Password;
         private string ReEnterPassword;
         private Button RegisterButton;
@@ -78,7 +76,7 @@ namespace saasmobile.roid
                 else
                 {
                     // date of birth to be implemented
-                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, EmailHandle, EmailDomain, Password);
+                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, "zip", "country", Email, Password);
                     MockStudyParticipantTable.AddParticipant(newUser);
                     StartActivity(typeof(LoginActivity));
                 }
@@ -118,23 +116,14 @@ namespace saasmobile.roid
 
         private bool IsEmailRegistered()
         {
-            SetEmailHandleAndDomain();
-
             foreach (StudyParticipant sp in MockStudyParticipantTable.getTable())
             {
-                if (EmailHandle.Equals(sp.EmailHandle) && EmailDomain.Equals(sp.EmailDomain))
+                if (Email.Equals(sp.Email))
                 {
                     return true;
                 }
             }
             return false;
-        }
-
-        private void SetEmailHandleAndDomain()
-        {
-            int atIndex = Email.IndexOf("@");
-            EmailHandle = Email.Substring(0, atIndex);
-            EmailDomain = Email.Substring(atIndex);
         }
 
         private bool DoPasswordsMatch()
