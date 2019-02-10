@@ -43,7 +43,7 @@ namespace saasmobile.ios
 
             if (!isOfAge(bDate))
             {
-                var invalidAlert = UIAlertController.Create("Age Error.", "You need to be at least 18 years old to register.", UIAlertControllerStyle.Alert);
+                var invalidAlert = UIAlertController.Create("Age Error.", "You need to be at least 19 years old to register.", UIAlertControllerStyle.Alert);
                 invalidAlert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine("Okay was clicked")));
                 PresentViewController(invalidAlert, true, null);
                 return;
@@ -118,7 +118,7 @@ namespace saasmobile.ios
 
         private bool isOfAge(DateTime bDate)
         {
-            TimeSpan minAge = new TimeSpan(365 * 18, 0, 0, 0);
+            TimeSpan minAge = new TimeSpan(365 * 19, 0, 0, 0);
 
             return bDate.Add(minAge) <= DateTime.Today;
         }
