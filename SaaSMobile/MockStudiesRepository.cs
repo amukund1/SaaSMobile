@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
 
 namespace SaaSMobile
 {
     public static class MockStudiesRepository
     {
-        private static ArrayList repository = new ArrayList() { new Study("Study 1", "Study 1 Info", new ArrayList() { new Researcher("Joe", "Smith", "joesmith@domain.com") }, new StudyConstraints(19)) };
+        private static List<Study> repository = new List<Study>() { new Study("Study 1", "Study 1 Info", new Researcher("Joe", "Smith", "joesmith@domain.com"), new StudyConstraints(19)) };
 
 
-        public static ArrayList GetRepo()
+        public static List<Study> GetRepo()
         {
             return repository;
         }

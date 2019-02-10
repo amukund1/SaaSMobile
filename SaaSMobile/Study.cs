@@ -7,12 +7,12 @@ namespace SaaSMobile
     {
         private static int id = 0;
              
-        public Study(string name, string description, ArrayList researchers, StudyConstraints constraints)
+        public Study(string name, string description, Researcher admin, StudyConstraints constraints)
         {
             ++id;
             Name = name;
             Description = description;
-            Researchers = researchers;
+            AdminResearcher = admin;
             Constraints = constraints;
         }
 
@@ -26,7 +26,7 @@ namespace SaaSMobile
             get;
         }
 
-        public ArrayList Researchers
+        public Researcher AdminResearcher
         {
             get;
         }

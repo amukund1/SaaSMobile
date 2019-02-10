@@ -16,10 +16,19 @@ namespace saasmobile.ios
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton joinStudyButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIView studiesScreen { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
+            if (joinStudyButton != null) {
+                joinStudyButton.Dispose ();
+                joinStudyButton = null;
+            }
+
             if (studiesScreen != null) {
                 studiesScreen.Dispose ();
                 studiesScreen = null;

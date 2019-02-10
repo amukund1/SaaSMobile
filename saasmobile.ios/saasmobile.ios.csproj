@@ -124,6 +124,8 @@
     <InterfaceDefinition Include="DashboardTabBarController.xib" />
     <InterfaceDefinition Include="ProfileViewController.xib" />
     <InterfaceDefinition Include="WelcomeViewController.xib" />
+    <InterfaceDefinition Include="StudiesRepositoryTableViewController.xib" />
+    <InterfaceDefinition Include="StudyDetailViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -161,6 +163,15 @@
     <Compile Include="WelcomeViewController.designer.cs">
       <DependentUpon>WelcomeViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudiesRepositoryTableViewController.cs" />
+    <Compile Include="StudiesRepositoryTableViewController.designer.cs">
+      <DependentUpon>StudiesRepositoryTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudyDetailViewController.cs" />
+    <Compile Include="StudyDetailViewController.designer.cs">
+      <DependentUpon>StudyDetailViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudiesDatasource.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaaSMobile\SaaSMobile.csproj">
