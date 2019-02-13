@@ -690,7 +690,7 @@
                                 <connections>
                                     <action selector="UpdateProfileButton_TouchUpInside:" destination="24079" id="24078" eventType="touchUpInside"/>
                                     <action selector="StudyRegisterButton_TouchUpInside:" destination="23504" id="25092" eventType="touchUpInside"/>
-                                    <segue id="27673" destination="2272" kind="push"/>
+                                    <segue id="28186" destination="1817" kind="push"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="24124" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
