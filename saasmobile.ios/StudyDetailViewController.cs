@@ -37,6 +37,13 @@ namespace saasmobile.ios
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+        partial void StudyRegisterButton_TouchUpInside(UIButton sender)
+        {
+            StudyParticipant curParticipant = MockStudyParticipantTable.CurrentParticipant;
+
+            MockParticipantStudyLists.JoinStudy(curParticipant, _study);
+        }
     }
 }
 

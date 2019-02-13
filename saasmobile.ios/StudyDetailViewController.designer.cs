@@ -30,9 +30,9 @@ namespace saasmobile.ios
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton studyRegisterButton { get; set; }
 
-        [Action ("UIButton24077_TouchUpInside:")]
+        [Action ("StudyRegisterButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
-        partial void UIButton24077_TouchUpInside (UIKit.UIButton sender);
+        partial void StudyRegisterButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {

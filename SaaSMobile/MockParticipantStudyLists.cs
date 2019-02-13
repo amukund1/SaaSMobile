@@ -21,9 +21,9 @@ namespace SaaSMobile
             }
         }
 
-        public static Hashtable GetParticipantStudyLists()
+        public static HashSet<Study> GetParticipantRegisteredStudies(StudyParticipant sp)
         {
-            return participantStudyLists;
+            return (HashSet<Study>) participantStudyLists[sp];
         }
 
     }
