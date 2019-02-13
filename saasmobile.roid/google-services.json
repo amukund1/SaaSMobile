@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "981585540799",
+    "firebase_url": "https://sleepasasymptom.firebaseio.com",
+    "project_id": "sleepasasymptom",
+    "storage_bucket": "sleepasasymptom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:981585540799:android:e3946b5d065f5f23",
+        "android_client_info": {
+          "package_name": "saasmobile.roid.saasmobile.roid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "981585540799-gfco6bgvsogo28h5ep0tivo32t2q2mhd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaBVGKRVfcBHkkLi6uE_nkvTpG4ELOkn4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
