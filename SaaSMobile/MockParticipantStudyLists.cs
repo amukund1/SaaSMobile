@@ -26,5 +26,10 @@ namespace SaaSMobile
             return (HashSet<Study>) participantStudyLists[sp];
         }
 
+        public static int Size()
+        {
+            return participantStudyLists.Count;
+        }
+
     }
 }

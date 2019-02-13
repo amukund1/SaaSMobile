@@ -126,6 +126,7 @@
     <InterfaceDefinition Include="WelcomeViewController.xib" />
     <InterfaceDefinition Include="StudiesRepositoryTableViewController.xib" />
     <InterfaceDefinition Include="StudyDetailViewController.xib" />
+    <InterfaceDefinition Include="SelectedStudyDetailViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -172,6 +173,11 @@
       <DependentUpon>StudyDetailViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="StudiesDatasource.cs" />
+    <Compile Include="RegisteredStudiesDatasource.cs" />
+    <Compile Include="SelectedStudyDetailViewController.cs" />
+    <Compile Include="SelectedStudyDetailViewController.designer.cs">
+      <DependentUpon>SelectedStudyDetailViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaaSMobile\SaaSMobile.csproj">

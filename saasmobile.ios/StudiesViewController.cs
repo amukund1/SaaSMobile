@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 
 using UIKit;
+
+using SaaSMobile;
+using Foundation;
 
 namespace saasmobile.ios
 {
@@ -17,7 +21,51 @@ namespace saasmobile.ios
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            if (MockParticipantStudyLists.Size() == 0)
+            {
+                return;
+            }
+
+            StudyParticipant curParticipant = MockStudyParticipantTable.CurrentParticipant;
+
+            var registeredStudies = MockParticipantStudyLists.GetParticipantRegisteredStudies(curParticipant);
+            var studiesList = ToList(registeredStudies);
+
+            var source = new RegisteredStudiesDatasource(studiesList);
+
+            RegisteredStudiesTableView.Source = source;
+
+        }
+
+        private List<Study> ToList(HashSet<Study> studies)
+        {
+            List<Study> studiesList = new List<Study>();
+            foreach (Study study in studies)
+            {
+                studiesList.Add(study);
+            }
+            return studiesList;
+        }
+
+        public override void PrepareForSegue(UIStoryboardSegue segue, NSObject sender)
+        {
+            base.PrepareForSegue(segue, sender);
+
+            if (segue.Identifier.Equals("joinStudySegue"))
+            {
+                return;
+            }
+
+            RegisteredStudiesDatasource source = (RegisteredStudiesDatasource) RegisteredStudiesTableView.Source;
+            var study = source.GetStudy(RegisteredStudiesTableView.IndexPathForSelectedRow.Row);
+
+            if (segue.Identifier.Equals("selectedStudySegue"))
+            {
+                var target = (SelectedStudyDetailViewController) segue.DestinationViewController;
+                target.SetSelectedStudy(study);
+
+            }
         }
 
         public override void DidReceiveMemoryWarning()
