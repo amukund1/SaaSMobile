@@ -195,6 +195,7 @@
     <Compile Include="SelectedStudyDetailViewController.designer.cs">
       <DependentUpon>SelectedStudyDetailViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudyParticipants_iOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SaaSMobile\SaaSMobile.csproj">
