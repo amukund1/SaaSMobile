@@ -21,7 +21,33 @@ namespace saasmobile.ios
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-            // Perform any additional setup after loading the view, typically from a nib.
+
+            StudyParticipants_iOS.GetInstance();
+            FirebaseTest();
+        }
+
+        void FirebaseTest()
+        {
+            StudyParticipants_iOS.auth.CreateUser("adithyam120@gmail.com",
+                                                    "123456",
+                                                    (user, error) =>
+                                                    {
+                                                        if (error != null)
+                                                        {
+                                                            AlertShow.Show(this, "Error", error.ToString());
+                                                            return;
+                                                        }
+
+                                                        object[] keys = { "key 1" };
+                                                        object[] vals = { "val1" };
+
+                                                        NSDictionary myTestDict = NSDictionary.FromObjectsAndKeys(vals, keys);
+
+
+                                                        StudyParticipants_iOS.ParticipantsNode.GetChild("test").SetValue<NSDictionary>(myTestDict);
+
+                                                        AlertShow.Show(this, "Success", "Firebase Test was successful");
+                                                    });
         }
 
         public override void DidReceiveMemoryWarning()
