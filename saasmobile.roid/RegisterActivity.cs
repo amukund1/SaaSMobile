@@ -1,12 +1,13 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Support.V7.App;
 using Android.Widget;
 using SaaSMobile;
 
 namespace saasmobile.roid
 {
     [Activity(Label = "RegisterActivity")]
-    public class RegisterActivity : Activity
+    public class RegisterActivity : AppCompatActivity
     {
         private string FirstName;
         private string LastName;

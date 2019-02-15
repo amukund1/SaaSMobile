@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SaaSMobile
 {
@@ -14,6 +15,13 @@ namespace SaaSMobile
         public static List<Study> GetRepo()
         {
             return repository;
+        }
+
+        public static Study GetStudy(int id)
+        {
+            return (from r in repository
+                    where r.Id == id
+                    select r).FirstOrDefault();
         }
     }
 }

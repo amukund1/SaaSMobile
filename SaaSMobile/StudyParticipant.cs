@@ -6,8 +6,6 @@ namespace SaaSMobile
     {
         private static int id = 0;
 
-
-
         public StudyParticipant(string firstName, string lastName, DateTime dob, string zip, string country, string email, string password)
         {
             ++id;

@@ -1,12 +1,13 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Support.V7.App;
 using Android.Widget;
 using SaaSMobile;
 
 namespace saasmobile.roid
 {
     [Activity(Label = "DashboardActivity")]
-    public class DashboardActivity : Activity
+    public class DashboardActivity : AppCompatActivity
     {
         private Button LogoutButton;
         private Button StudyButton;

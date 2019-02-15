@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-
-namespace SaaSMobile
+﻿namespace SaaSMobile
 {
     public class Study
     {
@@ -10,10 +7,17 @@ namespace SaaSMobile
         public Study(string name, string description, Researcher admin, StudyConstraints constraints)
         {
             ++id;
+            Id = id;
+
             Name = name;
             Description = description;
             AdminResearcher = admin;
             Constraints = constraints;
+        }
+
+        public int Id
+        {
+            get;
         }
 
         public string Name
