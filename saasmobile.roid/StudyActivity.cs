@@ -23,9 +23,15 @@ namespace saasmobile.roid
 
             StudyParticipant currentUser = MockStudyParticipantTable.CurrentParticipant;
             var registeredStudies = MockParticipantStudyLists.GetParticipantRegisteredStudies(currentUser);
-            var studiesList = ToList(registeredStudies);
-
-            var adapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, studiesList.ToArray());
+            if (registeredStudies != null)
+            {
+                var studiesList = ToList(registeredStudies);
+                this.ListAdapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, studiesList.ToArray());
+            }
+            else
+            {
+                this.ListAdapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, new List<Study>());
+            }
 
             ViewStudyRegisterButton.Click += delegate
             {

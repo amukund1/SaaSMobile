@@ -2,6 +2,7 @@
 using Android.OS;
 using Android.Widget;
 using SaaSMobile;
+using System.Collections.Generic;
 using Android.Views;
 using Android.Content;
 
@@ -17,7 +18,23 @@ namespace saasmobile.roid
             SetContentView(Resource.Layout.study_register_activity);
 
             var repo = MockStudiesRepository.GetRepo();
-            var adapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, repo.ToArray());
+            StudyParticipant currentUser = MockStudyParticipantTable.CurrentParticipant;
+            var registeredStudies = MockParticipantStudyLists.GetParticipantRegisteredStudies(currentUser);
+
+            if (registeredStudies != null)
+            {
+                var studiesList = ToList(registeredStudies);
+                var reduced_repo = repo;
+                foreach (Study study in registeredStudies)
+                {
+                    reduced_repo.Remove(study);
+                }
+                this.ListAdapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, reduced_repo.ToArray());
+            }
+            else
+            {
+                this.ListAdapter = new ArrayAdapter<Study>(this, Resource.Layout.study_activity_list, repo.ToArray());
+            }
         }
 
         protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -30,6 +47,16 @@ namespace saasmobile.roid
             intent.PutExtra("id", selectedItem.Id);
 
             StartActivity(intent);
+        }
+
+        private List<Study> ToList(HashSet<Study> studies)
+        {
+            List<Study> studiesList = new List<Study>();
+            foreach (Study study in studies)
+            {
+                studiesList.Add(study);
+            }
+            return studiesList;
         }
     }
 }

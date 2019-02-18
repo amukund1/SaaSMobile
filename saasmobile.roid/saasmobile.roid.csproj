@@ -138,13 +138,13 @@
     <AndroidResource Include="Resources\layout\study_detail_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\study_register_activity.axml">
-      <SubType>Designer</SubType>
-    </AndroidResource>
     <AndroidResource Include="Resources\layout\study_activity_list.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\study_register_detail_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\study_register_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
     <Content Include="Resources\menu\bottom_nav_main.xml">

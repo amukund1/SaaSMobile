@@ -19,9 +19,7 @@ namespace SaaSMobile
 
         public static Study GetStudy(int id)
         {
-            return (from r in repository
-                    where r.Id == id
-                    select r).FirstOrDefault();
+            return (from r in repository where r.Id == id select r).FirstOrDefault();
         }
     }
 }

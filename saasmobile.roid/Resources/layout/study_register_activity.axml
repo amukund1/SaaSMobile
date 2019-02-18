@@ -10,5 +10,5 @@
 		android:textAlignment="center"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:id="@+id/studiesListText" />
+		android:id="@+android:id/list" />
 </RelativeLayout>
