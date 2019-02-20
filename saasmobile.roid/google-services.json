@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "981585540799-5fb8c5cn5nvocji6ijisshe1d5bir4c3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "saasmobile.roid.saasmobile.roid",
+            "certificate_hash": "3760bae8bc8ec7d5d9915c182271b2c51ef4f901"
+          }
+        },
+        {
           "client_id": "981585540799-gfco6bgvsogo28h5ep0tivo32t2q2mhd.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "981585540799-gfco6bgvsogo28h5ep0tivo32t2q2mhd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "981585540799-24qbbdoimb24pmt1a3p1en2qoe9iv43r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.companyname.saasmobile-ios"
+              }
+            }
+          ]
         },
         "ads_service": {
           "status": 2
