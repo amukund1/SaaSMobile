@@ -9,13 +9,12 @@ using Android.Gms.Tasks;
 
 namespace saasmobile.roid
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "LoginActivity")]
     public class LoginActivity : AppCompatActivity, IOnCompleteListener
     {
         private string Password;
         private string Email;
         private Button Login;
-        private Button Register;
         public static FirebaseApp mApp;
         private FirebaseAuth mAuth;
 
@@ -24,24 +23,24 @@ namespace saasmobile.roid
             base.OnCreate(savedInstanceState);
             // Set our view from the login layout resource
             SetContentView(Resource.Layout.login_activity);
+            var email = Intent.GetStringExtra("email");
+            FindViewById<EditText>(Resource.Id.emailLoginText).SetText(email, TextView.BufferType.Editable);
 
             InitFirebaseAuth();
 
-            Login = FindViewById<Button>(Resource.Id.loginButton);
-            Register = FindViewById<Button>(Resource.Id.registerButton);
+            Login = FindViewById<Button>(Resource.Id.loginAtLoginButton);
 
-            Login.Click += delegate {
-
-                Email = FindViewById<EditText>(Resource.Id.emailText).Text.ToLower();
-                Password = FindViewById<EditText>(Resource.Id.passwordText).Text;
-
-                LoginUser(Email, Password);
-            };
-
-            Register.Click += delegate
+            Login.Click += delegate
             {
-                StartActivity(typeof(RegisterActivity));
-                Finish();
+                Email = FindViewById<EditText>(Resource.Id.emailLoginText).Text.ToLower();
+                Password = FindViewById<EditText>(Resource.Id.passwordLoginText).Text;
+
+                //LoginUser(Email, Password);
+                if (AreCredentialsValid())
+                {
+                    StartActivity(typeof(DashboardActivity));
+                    Finish();
+                }
             };
         }
 
