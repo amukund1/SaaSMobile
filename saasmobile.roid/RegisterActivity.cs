@@ -13,6 +13,8 @@ namespace saasmobile.roid
         private string LastName;
         private string DateOfBirthString;
         private System.DateTime DateOfBirth;
+        private string ZipCode;
+        private string Country;
         private string Email;
         private string Password;
         private string ReEnterPassword;
@@ -33,7 +35,9 @@ namespace saasmobile.roid
                 FirstName = char.ToUpper(firstName[0]) + firstName.Substring(1);
                 string lastName = FindViewById<EditText>(Resource.Id.lastNameRegisterText).Text;
                 LastName = char.ToUpper(lastName[0]) + lastName.Substring(1);
-                DateOfBirthString = FindViewById<EditText>(Resource.Id.dateOfBirthRegisterButton).Text;
+                DateOfBirthString = FindViewById<EditText>(Resource.Id.dateOfBirthRegisterText).Text;
+                ZipCode = FindViewById<EditText>(Resource.Id.zipCodeRegisterText).Text;
+                Country = FindViewById<EditText>(Resource.Id.countryRegisterText).Text;
                 Email = FindViewById<EditText>(Resource.Id.emailRegisterText).Text.ToLower();
                 ReEnterPassword = FindViewById<EditText>(Resource.Id.reEnterPasswordRegisterText).Text;
                 Password = FindViewById<EditText>(Resource.Id.passwordRegisterText).Text;
@@ -77,7 +81,7 @@ namespace saasmobile.roid
                 else
                 {
                     // date of birth to be implemented
-                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, "zip", "country", Email, Password);
+                    StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, ZipCode, Country, Email, Password);
                     MockStudyParticipantTable.AddParticipant(newUser);
                     StartActivity(typeof(LoginActivity));
                 }

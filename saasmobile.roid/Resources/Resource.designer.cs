@@ -2591,6 +2591,9 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0097
 			public const int coordinator = 2131427479;
 			
+			// aapt resource value: 0x7f0b00c1
+			public const int countryRegisterText = 2131427521;
+			
 			// aapt resource value: 0x7f0b0073
 			public const int custom = 2131427443;
 			
@@ -2601,7 +2604,7 @@ namespace saasmobile.roid
 			public const int dark = 2131427363;
 			
 			// aapt resource value: 0x7f0b00bf
-			public const int dateOfBirthRegisterButton = 2131427519;
+			public const int dateOfBirthRegisterText = 2131427519;
 			
 			// aapt resource value: 0x7f0b0080
 			public const int decor_content_parent = 2131427456;
@@ -2633,8 +2636,8 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b00a3
 			public const int emailLoginText = 2131427491;
 			
-			// aapt resource value: 0x7f0b00c0
-			public const int emailRegisterText = 2131427520;
+			// aapt resource value: 0x7f0b00c2
+			public const int emailRegisterText = 2131427522;
 			
 			// aapt resource value: 0x7f0b00a7
 			public const int emailText = 2131427495;
@@ -2744,14 +2747,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0091
 			public const int logoutButton = 2131427473;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int masked = 2131427535;
+			// aapt resource value: 0x7f0b00d1
+			public const int masked = 2131427537;
 			
 			// aapt resource value: 0x7f0b00b0
 			public const int media_actions = 2131427504;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int message = 2131427533;
+			// aapt resource value: 0x7f0b00cf
+			public const int message = 2131427535;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int middle = 2131427384;
@@ -2795,8 +2798,8 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b00a4
 			public const int passwordLoginText = 2131427492;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int passwordRegisterText = 2131427521;
+			// aapt resource value: 0x7f0b00c3
+			public const int passwordRegisterText = 2131427523;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int pin = 2131427411;
@@ -2810,14 +2813,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b007b
 			public const int radio = 2131427451;
 			
-			// aapt resource value: 0x7f0b00c2
-			public const int reEnterPasswordRegisterText = 2131427522;
+			// aapt resource value: 0x7f0b00c4
+			public const int reEnterPasswordRegisterText = 2131427524;
 			
 			// aapt resource value: 0x7f0b00a9
 			public const int registerButton = 2131427497;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int registeringButton = 2131427523;
+			// aapt resource value: 0x7f0b00c5
+			public const int registeringButton = 2131427525;
 			
 			// aapt resource value: 0x7f0b0050
 			public const int right = 2131427408;
@@ -2939,29 +2942,29 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0092
 			public const int studyButton = 2131427474;
 			
-			// aapt resource value: 0x7f0b00c8
-			public const int studyDetailContactText = 2131427528;
-			
-			// aapt resource value: 0x7f0b00c7
-			public const int studyDetailDescriptionText = 2131427527;
-			
-			// aapt resource value: 0x7f0b00c6
-			public const int studyDetailNameText = 2131427526;
-			
-			// aapt resource value: 0x7f0b00c5
-			public const int studyItem = 2131427525;
-			
-			// aapt resource value: 0x7f0b00cc
-			public const int studyRegisterButton = 2131427532;
-			
-			// aapt resource value: 0x7f0b00cb
-			public const int studyRegisterDetailContactText = 2131427531;
-			
 			// aapt resource value: 0x7f0b00ca
-			public const int studyRegisterDetailDescriptionText = 2131427530;
+			public const int studyDetailContactText = 2131427530;
 			
 			// aapt resource value: 0x7f0b00c9
-			public const int studyRegisterDetailNameText = 2131427529;
+			public const int studyDetailDescriptionText = 2131427529;
+			
+			// aapt resource value: 0x7f0b00c8
+			public const int studyDetailNameText = 2131427528;
+			
+			// aapt resource value: 0x7f0b00c7
+			public const int studyItem = 2131427527;
+			
+			// aapt resource value: 0x7f0b00ce
+			public const int studyRegisterButton = 2131427534;
+			
+			// aapt resource value: 0x7f0b00cd
+			public const int studyRegisterDetailContactText = 2131427533;
+			
+			// aapt resource value: 0x7f0b00cc
+			public const int studyRegisterDetailDescriptionText = 2131427532;
+			
+			// aapt resource value: 0x7f0b00cb
+			public const int studyRegisterDetailNameText = 2131427531;
 			
 			// aapt resource value: 0x7f0b007c
 			public const int submenuarrow = 2131427452;
@@ -3038,14 +3041,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b002d
 			public const int useLogo = 2131427373;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int viewStudyRegisterButton = 2131427524;
+			// aapt resource value: 0x7f0b00c6
+			public const int viewStudyRegisterButton = 2131427526;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int visible = 2131427534;
+			// aapt resource value: 0x7f0b00d0
+			public const int visible = 2131427536;
 			
 			// aapt resource value: 0x7f0b00a2
 			public const int welcomeLoginText = 2131427490;
@@ -3061,6 +3064,9 @@ namespace saasmobile.roid
 			
 			// aapt resource value: 0x7f0b0035
 			public const int wrap_content = 2131427381;
+			
+			// aapt resource value: 0x7f0b00c0
+			public const int zipCodeRegisterText = 2131427520;
 			
 			static Id()
 			{
