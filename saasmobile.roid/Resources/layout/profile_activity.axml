@@ -1,130 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical"
-	android:weightSum="100"
-	android:gravity="center">
-	<TextView
-		android:text="First Name:"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:textSize="24sp"
-		android:layout_marginLeft="50dp"
-		android:layout_marginRight="50dp"
-		android:singleLine="true"
-		android:id="@+id/firstNameUpdateText" />
-	<TextView
-		android:text="Last Name:"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:textSize="24sp"
-		android:layout_marginLeft="50dp"
-		android:layout_marginRight="50dp"
-		android:singleLine="true"
-		android:id="@+id/lastNameUpdateText" />
-	<TextView
-		android:text="Date of Birth:"
-		android:inputType="date"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:textSize="24sp"
-		android:layout_marginLeft="50dp"
-		android:layout_marginRight="50dp"
-		android:id="@+id/dateOfBirthUpdateText" />
+    android:layout_height="match_parent"
+	>
 	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_above="@+id/toolbar"
+		android:orientation="vertical"
 		android:weightSum="100"
-		android:orientation="horizontal">
+		android:gravity="center">
 		<TextView
-			android:text="Zip Code:"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="40"
-			android:textSize="24sp"
+			android:text="First Name:"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:textSize="16sp"
 			android:layout_marginLeft="50dp"
-			android:singleLine="true"
-			android:id="@+id/zipCodeText" />
-		<EditText
-			android:inputType="number"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="60"
 			android:layout_marginRight="50dp"
 			android:singleLine="true"
-			android:id="@+id/zipCodeUpdateText" />
-	</LinearLayout>
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:weightSum="100"
-		android:orientation="horizontal">
+			android:id="@+id/firstNameUpdateText" />
 		<TextView
-			android:text="Country:"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="40"
-			android:textSize="24sp"
+			android:text="Last Name:"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:textSize="16sp"
 			android:layout_marginLeft="50dp"
-			android:singleLine="true"
-			android:id="@+id/countryText" />
-		<EditText
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="60"
 			android:layout_marginRight="50dp"
 			android:singleLine="true"
-			android:id="@+id/countryUpdateText" />
-	</LinearLayout>
-	<TextView
-		android:text="Email:"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:textSize="24sp"
-		android:layout_marginLeft="50dp"
-		android:layout_marginRight="50dp"
-		android:singleLine="true"
-		android:id="@+id/emailUpdateText" />
-	<LinearLayout
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="10"
-		android:weightSum="100"
-		android:orientation="horizontal">
+			android:id="@+id/lastNameUpdateText" />
 		<TextView
-			android:text="Password:"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="40"
-			android:textSize="24sp"
+			android:text="Date of Birth:"
+			android:inputType="date"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:textSize="16sp"
 			android:layout_marginLeft="50dp"
-			android:singleLine="true"
-			android:id="@+id/passwordText" />
-		<EditText
-			android:inputType="textPassword"
-			android:layout_width="0dp"
-			android:layout_height="match_parent"
-			android:layout_weight="60"
+			android:layout_marginRight="50dp"
+			android:id="@+id/dateOfBirthUpdateText" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:weightSum="100"
+			android:orientation="horizontal">
+			<TextView
+				android:text="Zip Code:"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="30"
+				android:textSize="16sp"
+				android:layout_marginLeft="50dp"
+				android:singleLine="true"
+				android:id="@+id/zipCodeText" />
+			<EditText
+				android:inputType="number"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="70"
+				android:layout_marginRight="50dp"
+				android:singleLine="true"
+				android:id="@+id/zipCodeUpdateText" />
+		</LinearLayout>
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:weightSum="100"
+			android:orientation="horizontal">
+			<TextView
+				android:text="Country:"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="30"
+				android:textSize="16sp"
+				android:layout_marginLeft="50dp"
+				android:singleLine="true"
+				android:id="@+id/countryText" />
+			<EditText
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="70"
+				android:layout_marginRight="50dp"
+				android:singleLine="true"
+				android:id="@+id/countryUpdateText" />
+		</LinearLayout>
+		<TextView
+			android:text="Email:"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:textSize="16sp"
+			android:layout_marginLeft="50dp"
 			android:layout_marginRight="50dp"
 			android:singleLine="true"
-			android:id="@+id/passwordUpdateText" />
+			android:id="@+id/emailUpdateText" />
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="10"
+			android:weightSum="100"
+			android:orientation="horizontal">
+			<TextView
+				android:text="Password:"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="30"
+				android:textSize="16sp"
+				android:layout_marginLeft="50dp"
+				android:singleLine="true"
+				android:id="@+id/passwordText" />
+			<EditText
+				android:inputType="textPassword"
+				android:layout_width="0dp"
+				android:layout_height="match_parent"
+				android:layout_weight="70"
+				android:layout_marginRight="50dp"
+				android:singleLine="true"
+				android:id="@+id/passwordUpdateText" />
+		</LinearLayout>
+		<Button
+			android:text="Update"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="12"
+			android:layout_marginTop="25dp"
+			android:layout_marginLeft="75dp"
+			android:layout_marginRight="75dp"
+			android:id="@+id/updateProfileButton" />
 	</LinearLayout>
-	<Button
-		android:text="Update"
-		android:layout_width="match_parent"
-		android:layout_height="0dp"
-		android:layout_weight="12"
-		android:layout_marginTop="25dp"
-		android:layout_marginLeft="75dp"
-		android:layout_marginRight="75dp"
-		android:id="@+id/updateProfileButton" />
-
-</LinearLayout>
+	<include
+		android:id="@id/toolbar"
+        layout="@layout/toolbar"/>
+</RelativeLayout>

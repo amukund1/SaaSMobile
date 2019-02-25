@@ -38,8 +38,15 @@ namespace saasmobile.roid
                 //LoginUser(Email, Password);
                 if (AreCredentialsValid())
                 {
-                    StartActivity(typeof(DashboardActivity));
+                    StartActivity(typeof(StudyActivity));
                     Finish();
+                }
+                else
+                {
+                    Android.Support.V7.App.AlertDialog.Builder alert = new Android.Support.V7.App.AlertDialog.Builder(this);
+                    alert.SetTitle("Incorrect Credentials");
+                    alert.SetMessage("Incorrect Credentials Entered. Please try again.");
+                    alert.Show();
                 }
             };
         }

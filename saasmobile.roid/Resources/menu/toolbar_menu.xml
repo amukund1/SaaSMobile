@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+       android:id="@+id/menu_study"
+       android:showAsAction="ifRoom"
+       android:title="Study" />
+  <item
+       android:id="@+id/menu_data"
+       android:showAsAction="ifRoom"
+       android:title="Data" />
+  <item
+       android:id="@+id/menu_profile"
+       android:showAsAction="ifRoom"
+       android:title="Profile" />
+  <item
+     android:id="@+id/menu_setting"
+     android:showAsAction="ifRoom"
+     android:title="Setting" />
+</menu>

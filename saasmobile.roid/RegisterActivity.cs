@@ -84,6 +84,7 @@ namespace saasmobile.roid
                     StudyParticipant newUser = new StudyParticipant(FirstName, LastName, DateOfBirth, ZipCode, Country, Email, Password);
                     MockStudyParticipantTable.AddParticipant(newUser);
                     StartActivity(typeof(LoginActivity));
+                    Finish();
                 }
             };
         }
