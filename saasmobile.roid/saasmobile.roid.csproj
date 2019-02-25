@@ -58,12 +58,15 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataActivity.cs" />
+    <Compile Include="ProfileActivity.cs" />
     <Compile Include="RegisterActivity.cs" />
     <Compile Include="DashboardActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingActivity.cs" />
     <Compile Include="StudyActivity.cs" />
     <Compile Include="StudyDetailActivity.cs" />
     <Compile Include="StudyRegisterActivity.cs" />
@@ -153,6 +156,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\main_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\data_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\profile_activity.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\setting_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

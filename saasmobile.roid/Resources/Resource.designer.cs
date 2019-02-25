@@ -2591,8 +2591,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0097
 			public const int coordinator = 2131427479;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int countryRegisterText = 2131427521;
+			// aapt resource value: 0x7f0b00cc
+			public const int countryRegisterText = 2131427532;
+			
+			// aapt resource value: 0x7f0b00c2
+			public const int countryText = 2131427522;
+			
+			// aapt resource value: 0x7f0b00c3
+			public const int countryUpdateText = 2131427523;
 			
 			// aapt resource value: 0x7f0b0073
 			public const int custom = 2131427443;
@@ -2603,8 +2609,11 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0023
 			public const int dark = 2131427363;
 			
+			// aapt resource value: 0x7f0b00ca
+			public const int dateOfBirthRegisterText = 2131427530;
+			
 			// aapt resource value: 0x7f0b00bf
-			public const int dateOfBirthRegisterText = 2131427519;
+			public const int dateOfBirthUpdateText = 2131427519;
 			
 			// aapt resource value: 0x7f0b0080
 			public const int decor_content_parent = 2131427456;
@@ -2636,11 +2645,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b00a3
 			public const int emailLoginText = 2131427491;
 			
-			// aapt resource value: 0x7f0b00c2
-			public const int emailRegisterText = 2131427522;
+			// aapt resource value: 0x7f0b00cd
+			public const int emailRegisterText = 2131427533;
 			
 			// aapt resource value: 0x7f0b00a7
 			public const int emailText = 2131427495;
+			
+			// aapt resource value: 0x7f0b00c4
+			public const int emailUpdateText = 2131427524;
 			
 			// aapt resource value: 0x7f0b0037
 			public const int end = 2131427383;
@@ -2672,8 +2684,11 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b004e
 			public const int fill_vertical = 2131427406;
 			
+			// aapt resource value: 0x7f0b00c8
+			public const int firstNameRegisterText = 2131427528;
+			
 			// aapt resource value: 0x7f0b00bd
-			public const int firstNameRegisterText = 2131427517;
+			public const int firstNameUpdateText = 2131427517;
 			
 			// aapt resource value: 0x7f0b005a
 			public const int @fixed = 2131427418;
@@ -2717,8 +2732,11 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0095
 			public const int largeLabel = 2131427477;
 			
+			// aapt resource value: 0x7f0b00c9
+			public const int lastNameRegisterText = 2131427529;
+			
 			// aapt resource value: 0x7f0b00be
-			public const int lastNameRegisterText = 2131427518;
+			public const int lastNameUpdateText = 2131427518;
 			
 			// aapt resource value: 0x7f0b004f
 			public const int left = 2131427407;
@@ -2747,14 +2765,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0091
 			public const int logoutButton = 2131427473;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int masked = 2131427537;
+			// aapt resource value: 0x7f0b00dc
+			public const int masked = 2131427548;
 			
 			// aapt resource value: 0x7f0b00b0
 			public const int media_actions = 2131427504;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int message = 2131427535;
+			// aapt resource value: 0x7f0b00da
+			public const int message = 2131427546;
 			
 			// aapt resource value: 0x7f0b0038
 			public const int middle = 2131427384;
@@ -2798,8 +2816,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b00a4
 			public const int passwordLoginText = 2131427492;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int passwordRegisterText = 2131427523;
+			// aapt resource value: 0x7f0b00ce
+			public const int passwordRegisterText = 2131427534;
+			
+			// aapt resource value: 0x7f0b00c5
+			public const int passwordText = 2131427525;
+			
+			// aapt resource value: 0x7f0b00c6
+			public const int passwordUpdateText = 2131427526;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int pin = 2131427411;
@@ -2813,14 +2837,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b007b
 			public const int radio = 2131427451;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int reEnterPasswordRegisterText = 2131427524;
+			// aapt resource value: 0x7f0b00cf
+			public const int reEnterPasswordRegisterText = 2131427535;
 			
 			// aapt resource value: 0x7f0b00a9
 			public const int registerButton = 2131427497;
 			
-			// aapt resource value: 0x7f0b00c5
-			public const int registeringButton = 2131427525;
+			// aapt resource value: 0x7f0b00d0
+			public const int registeringButton = 2131427536;
 			
 			// aapt resource value: 0x7f0b0050
 			public const int right = 2131427408;
@@ -2942,29 +2966,29 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0092
 			public const int studyButton = 2131427474;
 			
-			// aapt resource value: 0x7f0b00ca
-			public const int studyDetailContactText = 2131427530;
+			// aapt resource value: 0x7f0b00d5
+			public const int studyDetailContactText = 2131427541;
 			
-			// aapt resource value: 0x7f0b00c9
-			public const int studyDetailDescriptionText = 2131427529;
+			// aapt resource value: 0x7f0b00d4
+			public const int studyDetailDescriptionText = 2131427540;
 			
-			// aapt resource value: 0x7f0b00c8
-			public const int studyDetailNameText = 2131427528;
+			// aapt resource value: 0x7f0b00d3
+			public const int studyDetailNameText = 2131427539;
 			
-			// aapt resource value: 0x7f0b00c7
-			public const int studyItem = 2131427527;
+			// aapt resource value: 0x7f0b00d2
+			public const int studyItem = 2131427538;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int studyRegisterButton = 2131427534;
+			// aapt resource value: 0x7f0b00d9
+			public const int studyRegisterButton = 2131427545;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int studyRegisterDetailContactText = 2131427533;
+			// aapt resource value: 0x7f0b00d8
+			public const int studyRegisterDetailContactText = 2131427544;
 			
-			// aapt resource value: 0x7f0b00cc
-			public const int studyRegisterDetailDescriptionText = 2131427532;
+			// aapt resource value: 0x7f0b00d7
+			public const int studyRegisterDetailDescriptionText = 2131427543;
 			
-			// aapt resource value: 0x7f0b00cb
-			public const int studyRegisterDetailNameText = 2131427531;
+			// aapt resource value: 0x7f0b00d6
+			public const int studyRegisterDetailNameText = 2131427542;
 			
 			// aapt resource value: 0x7f0b007c
 			public const int submenuarrow = 2131427452;
@@ -3038,17 +3062,20 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0009
 			public const int up = 2131427337;
 			
+			// aapt resource value: 0x7f0b00c7
+			public const int updateProfileButton = 2131427527;
+			
 			// aapt resource value: 0x7f0b002d
 			public const int useLogo = 2131427373;
 			
-			// aapt resource value: 0x7f0b00c6
-			public const int viewStudyRegisterButton = 2131427526;
+			// aapt resource value: 0x7f0b00d1
+			public const int viewStudyRegisterButton = 2131427537;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int visible = 2131427536;
+			// aapt resource value: 0x7f0b00db
+			public const int visible = 2131427547;
 			
 			// aapt resource value: 0x7f0b00a2
 			public const int welcomeLoginText = 2131427490;
@@ -3065,8 +3092,14 @@ namespace saasmobile.roid
 			// aapt resource value: 0x7f0b0035
 			public const int wrap_content = 2131427381;
 			
+			// aapt resource value: 0x7f0b00cb
+			public const int zipCodeRegisterText = 2131427531;
+			
 			// aapt resource value: 0x7f0b00c0
-			public const int zipCodeRegisterText = 2131427520;
+			public const int zipCodeText = 2131427520;
+			
+			// aapt resource value: 0x7f0b00c1
+			public const int zipCodeUpdateText = 2131427521;
 			
 			static Id()
 			{
@@ -3215,130 +3248,139 @@ namespace saasmobile.roid
 			public const int dashboard_toolbar = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int design_bottom_navigation_item = 2130968605;
+			public const int data_activity = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int design_bottom_sheet_dialog = 2130968606;
+			public const int design_bottom_navigation_item = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int design_layout_snackbar = 2130968607;
+			public const int design_bottom_sheet_dialog = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int design_layout_snackbar_include = 2130968608;
+			public const int design_layout_snackbar = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int design_layout_tab_icon = 2130968609;
+			public const int design_layout_snackbar_include = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int design_layout_tab_text = 2130968610;
+			public const int design_layout_tab_icon = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int design_menu_item_action_area = 2130968611;
+			public const int design_layout_tab_text = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int design_navigation_item = 2130968612;
+			public const int design_menu_item_action_area = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int design_navigation_item_header = 2130968613;
+			public const int design_navigation_item = 2130968613;
 			
 			// aapt resource value: 0x7f040026
-			public const int design_navigation_item_separator = 2130968614;
+			public const int design_navigation_item_header = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int design_navigation_item_subheader = 2130968615;
+			public const int design_navigation_item_separator = 2130968615;
 			
 			// aapt resource value: 0x7f040028
-			public const int design_navigation_menu = 2130968616;
+			public const int design_navigation_item_subheader = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int design_navigation_menu_item = 2130968617;
+			public const int design_navigation_menu = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
-			public const int design_text_input_password_icon = 2130968618;
+			public const int design_navigation_menu_item = 2130968618;
 			
 			// aapt resource value: 0x7f04002b
-			public const int login_activity = 2130968619;
+			public const int design_text_input_password_icon = 2130968619;
 			
 			// aapt resource value: 0x7f04002c
-			public const int main_activity = 2130968620;
+			public const int login_activity = 2130968620;
 			
 			// aapt resource value: 0x7f04002d
-			public const int notification_action = 2130968621;
+			public const int main_activity = 2130968621;
 			
 			// aapt resource value: 0x7f04002e
-			public const int notification_action_tombstone = 2130968622;
+			public const int notification_action = 2130968622;
 			
 			// aapt resource value: 0x7f04002f
-			public const int notification_media_action = 2130968623;
+			public const int notification_action_tombstone = 2130968623;
 			
 			// aapt resource value: 0x7f040030
-			public const int notification_media_cancel_action = 2130968624;
+			public const int notification_media_action = 2130968624;
 			
 			// aapt resource value: 0x7f040031
-			public const int notification_template_big_media = 2130968625;
+			public const int notification_media_cancel_action = 2130968625;
 			
 			// aapt resource value: 0x7f040032
-			public const int notification_template_big_media_custom = 2130968626;
+			public const int notification_template_big_media = 2130968626;
 			
 			// aapt resource value: 0x7f040033
-			public const int notification_template_big_media_narrow = 2130968627;
+			public const int notification_template_big_media_custom = 2130968627;
 			
 			// aapt resource value: 0x7f040034
-			public const int notification_template_big_media_narrow_custom = 2130968628;
+			public const int notification_template_big_media_narrow = 2130968628;
 			
 			// aapt resource value: 0x7f040035
-			public const int notification_template_custom_big = 2130968629;
+			public const int notification_template_big_media_narrow_custom = 2130968629;
 			
 			// aapt resource value: 0x7f040036
-			public const int notification_template_icon_group = 2130968630;
+			public const int notification_template_custom_big = 2130968630;
 			
 			// aapt resource value: 0x7f040037
-			public const int notification_template_lines_media = 2130968631;
+			public const int notification_template_icon_group = 2130968631;
 			
 			// aapt resource value: 0x7f040038
-			public const int notification_template_media = 2130968632;
+			public const int notification_template_lines_media = 2130968632;
 			
 			// aapt resource value: 0x7f040039
-			public const int notification_template_media_custom = 2130968633;
+			public const int notification_template_media = 2130968633;
 			
 			// aapt resource value: 0x7f04003a
-			public const int notification_template_part_chronometer = 2130968634;
+			public const int notification_template_media_custom = 2130968634;
 			
 			// aapt resource value: 0x7f04003b
-			public const int notification_template_part_time = 2130968635;
+			public const int notification_template_part_chronometer = 2130968635;
 			
 			// aapt resource value: 0x7f04003c
-			public const int register_activity = 2130968636;
+			public const int notification_template_part_time = 2130968636;
 			
 			// aapt resource value: 0x7f04003d
-			public const int select_dialog_item_material = 2130968637;
+			public const int profile_activity = 2130968637;
 			
 			// aapt resource value: 0x7f04003e
-			public const int select_dialog_multichoice_material = 2130968638;
+			public const int register_activity = 2130968638;
 			
 			// aapt resource value: 0x7f04003f
-			public const int select_dialog_singlechoice_material = 2130968639;
+			public const int select_dialog_item_material = 2130968639;
 			
 			// aapt resource value: 0x7f040040
-			public const int study_activity = 2130968640;
+			public const int select_dialog_multichoice_material = 2130968640;
 			
 			// aapt resource value: 0x7f040041
-			public const int study_activity_list = 2130968641;
+			public const int select_dialog_singlechoice_material = 2130968641;
 			
 			// aapt resource value: 0x7f040042
-			public const int study_detail_activity = 2130968642;
+			public const int setting_activity = 2130968642;
 			
 			// aapt resource value: 0x7f040043
-			public const int study_register_activity = 2130968643;
+			public const int study_activity = 2130968643;
 			
 			// aapt resource value: 0x7f040044
-			public const int study_register_detail_activity = 2130968644;
+			public const int study_activity_list = 2130968644;
 			
 			// aapt resource value: 0x7f040045
-			public const int support_simple_spinner_dropdown_item = 2130968645;
+			public const int study_detail_activity = 2130968645;
 			
 			// aapt resource value: 0x7f040046
-			public const int tooltip = 2130968646;
+			public const int study_register_activity = 2130968646;
+			
+			// aapt resource value: 0x7f040047
+			public const int study_register_detail_activity = 2130968647;
+			
+			// aapt resource value: 0x7f040048
+			public const int support_simple_spinner_dropdown_item = 2130968648;
+			
+			// aapt resource value: 0x7f040049
+			public const int tooltip = 2130968649;
 			
 			static Layout()
 			{
